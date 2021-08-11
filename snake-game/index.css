@@ -1,0 +1,197 @@
+:root {
+    --primary-color: #F1D0E2;
+    --secondary-color: #f0afd3;
+    --bg-primary: #3C3C3C;
+    --bg-secondary: #4d4d4d;
+    
+    --grid-width: 0;
+    --grid-height: 0;
+    --grid-max-width: 0;
+    --grid-max-height: 0;
+    
+    --tile-width: 0;
+    --tile-height: 0;
+    --tile-max-width: 0;
+    --tile-max-height: 0;
+}
+
+html, body {
+    padding: 0;
+    font-size: 12px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg-primary);
+    color: var(--primary-color);
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    place-content: center;
+    padding: 2vw;
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+}
+
+h1 {
+    font-size: 3rem;
+    line-height: 0.9em;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+.block {
+    display: block;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.diff-select {
+    display: flex;
+}
+
+.diff-select button {
+    padding: 1.5em 2.5em;
+    font-size: 1.1rem;
+    margin-bottom: 2em;
+}
+
+.score {
+    margin: 0;
+    margin-top: 1.5em;
+    font-size: 1.5rem;
+}
+
+.grid {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    background: var(--bg-secondary);
+    
+    width: var(--grid-width);
+    height: var(--grid-height);
+    max-width: var(--grid-max-width);
+    max-height: var(--grid-max-height);
+
+    margin: 6em;
+    overflow: hidden;
+}
+
+.grid:before {
+    display: none;
+}
+
+.game-over:before {
+    position: absolute;
+    content: 'game over 😢';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(60,60,60,0.8);
+    font-size: 5rem;
+    color: var(--primary-color);
+    display: grid;
+    place-content: center;
+    z-index: 999;
+}
+
+.tile {
+    width: var(--tile-width);
+    height: var(--tile-height);
+    max-width: var(--tile-max-width);
+    max-height: var(--tile-max-height);
+}
+
+.worm {
+    background-color: var(--primary-color);
+    position: relative;
+}
+
+.head {
+    background: url('img/eyes.svg') no-repeat, var(--primary-color);
+    background-size: 70%;
+    background-position: center;
+    color: var(--bg-primary);
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+
+.tail:after {
+    position: absolute;
+    content: '';
+    background: var(--primary-color);
+    color: var(--bg-primary);
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    font-size: 2rem;
+    border-radius: 50%;
+    transform: translateX(-50%);
+    display: grid;
+    place-content: center;
+}
+
+.up {
+    transform: rotate(270deg);
+}
+.right {
+    transform: rotate(0deg);
+}
+.down {
+    transform: rotate(90deg);
+}
+.left {
+    transform: rotate(180deg);
+}
+
+.apple {
+    border-radius: 50%;
+    background-color: var(--secondary-color);
+}
+
+.directions {
+    width: 10em;
+    height: auto;
+    margin: 0.5em 1.5em;
+}
+
+button {
+    display: block;
+    padding: 1.5em 3em;
+    appearance: none;
+    border: none;
+    outline: none;
+    background: var(--primary-color);
+    color: var(--bg-primary);
+    font-weight: bold;
+    font-size: 1.4rem;
+    margin: 1em auto;
+}
+
+button:hover, button.active {
+    background: var(--secondary-color);
+}

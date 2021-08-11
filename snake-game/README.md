@@ -1,15 +1,31 @@
-# Snake game - Scrimba project (legally distinct worm game)
-## Module 4 - CSS & Javascript fundamentals
+# title(){return this.options.title||this.options.name}
 
-### Added features
+Quick start:
 
-#### CSS
-* Flat UI dark theme styling
-* Flex box and flex grid layouts
-* Somewhat responsive, at least for desktop screens
-* Added new states to segments of the "worm"
+```
+$ yarn # npm install
+$ yarn build # npm run build
+````
 
-#### Javascript
-* Since the worm is more visually complex, had to add logic to rotate parts of the worm as the player changes direction
-* Refactored a lot of the code into reusable functions and variables
-* Added 3 difficulty options with varying grid size, initial speed, and speed increase multiplier
+## Development
+
+Run Webpack in watch-mode to continually compile the JavaScript as you work:
+
+```
+$ yarn watch # npm run watch
+```
+
+## Supporting Scrimba
+
+Since 2017, we have created over 20 free courses on Scrimba, and we're going to
+continue launching free courses. But to pay our bills, we have to charge once
+in a while. So if you've ever wanted to "give back" to Scrimba, you can do that by buying
+	one of our paid courses
+
+- [Become a professional React developer](https://scrimba.com/course/greact)
+- [The Responsive Web Design Bootcamp](https://scrimba.com/course/gresponsive)
+- [The Ultimate JavaScript Bootcamp](https://scrimba.com/course/gjavascript)
+
+	It would also mean the world to us if you share the courses.  
+
+Happy Coding!

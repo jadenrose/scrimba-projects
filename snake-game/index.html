@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <link rel="stylesheet" href="index.css">
+        <meta name="viewport" content="width=device-width, initial-scale=0">
+    </head>
+    <body>
+        <header>
+            
+        </header>
+        <main>
+            <div class="flex-container">
+                <div>
+                    <div class="flex-container">
+                        <ul class="diff-select" id="diff-select">
+                            <li><button class="diff" id="easy">easy</button></li>
+                            <li><button class="diff" id="normal">normal</button></li>
+                            <li><button class="diff" id="hard">hard</button></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <button id="start">start/restart</button>
+                        <button id="reset">reset/stop</button>
+                    </div>
+                    <p class="score">Score: <span id="score-display"></span></p>
+                </div>
+                <div>
+                    <h1>legally distinct worm game </h1>
+                    <div class="grid"></div>
+                </div>
+                <div>
+                    <h2>change direction</h2>
+                    <img src="img/arrows.svg" alt="arrow keys" class="directions">
+                    <img src="img/wasd.svg" alt="w a s d keys" class="directions">
+                </div>
+            </div>
+        </main>
+        <script src="index.js"></script>
+    </body>
+</html>
